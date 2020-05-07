@@ -186,6 +186,13 @@ export default class TextField extends PureComponent {
     };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.value !== prevState.text) {
+      return { text: nextProps.value };
+    }
+    return null;
+  }
+
   createGetter(name) {
     this[name] = () => {
       let { [name]: value } = this.props;
