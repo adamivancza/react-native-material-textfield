@@ -24,7 +24,9 @@ export default class Line extends PureComponent {
     restricted: PropTypes.bool,
 
     tintColor: PropTypes.string,
+    tintBorderColor: PropTypes.string,
     baseColor: PropTypes.string,
+    baseBorderColor: PropTypes.string,
     errorColor: PropTypes.string,
 
     lineWidth: PropTypes.number,
@@ -61,7 +63,9 @@ export default class Line extends PureComponent {
       activeLineWidth,
       disabledLineWidth,
       baseColor,
+      baseBorderColor,
       tintColor,
+      tintBorderColor,
       errorColor,
       focusAnimation,
     } = this.props;
@@ -83,7 +87,7 @@ export default class Line extends PureComponent {
     return {
       borderColor: focusAnimation.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        outputRange: [errorColor, baseBorderColor, tintBorderColor],
       }),
 
       borderWidth: focusAnimation.interpolate({

@@ -50,8 +50,10 @@ export default class TextField extends PureComponent {
     labelFontSize: 12,
 
     tintColor: 'rgb(0, 145, 234)',
+    tintBorderColor: 'rgb(0, 145, 234)',
     textColor: 'rgba(0, 0, 0, .87)',
     baseColor: 'rgba(0, 0, 0, .38)',
+    baseBorderColor: 'rgba(0, 0, 0, .38)',
 
     errorColor: 'rgb(213, 0, 0)',
 
@@ -88,8 +90,10 @@ export default class TextField extends PureComponent {
     affixTextStyle: Text.propTypes.style,
 
     tintColor: PropTypes.string,
+    tintBorderColor: PropTypes.string,
     textColor: PropTypes.string,
     baseColor: PropTypes.string,
+    baseBorderColor: PropTypes.string,
 
     label: PropTypes.string,
     title: PropTypes.string,
@@ -641,7 +645,9 @@ export default class TextField extends PureComponent {
       activeLineWidth,
       disabledLineWidth,
       tintColor,
+      tintBorderColor,
       baseColor,
+      baseBorderColor,
       errorColor,
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
@@ -697,6 +703,9 @@ export default class TextField extends PureComponent {
 
       lineType,
       disabledLineType,
+
+      baseBorderColor,
+      tintBorderColor,
     };
 
     return (
