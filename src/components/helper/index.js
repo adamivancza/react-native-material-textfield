@@ -36,6 +36,19 @@ export default class Helper extends PureComponent {
     };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    let update = {};
+    if (nextProps.error !== prevState.error) {
+      update = { error: nextProps.error };
+      if (nextProps.error) {
+        update = { ...update, errored: true };
+      } else {
+        update = { ...update, errored: false };
+      }
+    }
+    return update;
+  }
+
   componentDidMount() {
     let { focusAnimation } = this.props;
 
