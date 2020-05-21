@@ -120,6 +120,14 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func,
+    editable: PropTypes.bool,
+    onChange: PropTypes.func,
+    onChangeText: PropTypes.func,
+    onContentSizeChange: PropTypes.func,
+    ref: PropTypes.func,
   };
 
   static inputContainerStyle = styles.inputContainer;
