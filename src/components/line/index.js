@@ -72,7 +72,7 @@ export default class Line extends PureComponent {
 
     if (disabled) {
       return {
-        borderColor: baseColor,
+        borderColor: baseBorderColor,
         borderWidth: disabledLineWidth,
       };
     }
